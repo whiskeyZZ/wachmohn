@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); // Option 1: Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+// Option 2: Lokale Schriftart
+@font-face {
+  font-family: 'MyCalligraphyFont';
+  src: url('/path/to/your/fontfile.woff2') format('woff2'),
+       url('/path/to/your/fontfile.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}*/
+
+h1 {
+  font-family: 'Dancing Script', 'MyCalligraphyFont', sans-serif; // Zuerst Google Font, dann lokale Schriftart als Fallback
+  //font-family: 'Grey Qo', 'MyCalligraphyFont', sans-serif;
+  color: #ffffff; // Weiß
+  text-align: center; // Horizontal zentriert
+  position: absolute;
+  top: 20px; // Vertikal oben, kann angepasst werden
+  left: 50%;
+  transform: translateX(-50%); // Perfekt horizontal zentriert
+  font-size: 4rem; // Schriftgröße anpassen
+  margin: 0;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Dancing Script', sans-serif;
+    color: #ffffff;
+    font-size: 1.75rem;
+    padding: 0 15px;
+}
+
+.navbar {
+    justify-content: center; /* Zentriert das Menü */
+    margin-top: 10px;
+}
+
+.jellyfish {
+    position: fixed;
+    //top: -30px; // Leicht über die Überschrift positionieren
+    //left: 50%;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 40pt;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 50% 50% 20% 20%; // Obere Hälfte eines Ovals
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5); // Leichter Leuchteffekt
+    
+    &:hover {
+        background-color: rgb(142, 170, 212);
+        .speech-bubble {
+            opacity: 1;
+            visibility: visible;
+        }
+        cursor: pointer;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      width: 6px;
+      height: 40px;
+      background: #ffffff;
+      border-radius: 3px;
+    }
+  
+    &::before {
+      left: 20%;
+      transform: rotate(20deg);
+      animation: tentacle 2s ease-in-out infinite;
+    }
+  
+    &::after {
+      right: 20%;
+      transform: rotate(-20deg);
+      animation: tentacle 2s ease-in-out infinite reverse;
+    }
+  
+    .tentacle {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      width: 6px;
+      height: 50px;
+      background: #ffffff;
+      border-radius: 3px;
+      transform: translateX(-50%);
+      animation: tentacle 2s ease-in-out infinite;
+    }
+
+    .speech-bubble {
+        position: absolute;
+        bottom: 120%;
+        right: 5;
+        transform: translateX(-50%);
+        width: 200px;
+        padding: 10px;
+        background: #ffffff;
+        color: #000000;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+        z-index: 10;
+        font-family: "Dancing Script", sans-serif;
+        font-size: 20pt;
+
+
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: #ffffff transparent transparent transparent;
+    }   
+  }
+
+}
+  
+  @keyframes tentacle {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(10deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+img {
+    float: right;
+    margin-right: 30pt;
+}
