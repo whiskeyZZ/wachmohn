@@ -1,48 +1,54 @@
 <h1 class="h1"><a href="#">Wachmohn</a></h1>
-<img src="../assets/jellyfish_head_2.png" width="20%">
+<img src="../assets/jellyfish_head_2.png" width="20%" />
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="blog">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Meine Bücher</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Meine Musik</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Meine Coding Projekte</a>
-            </li>
-        </ul>
-    </div>
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="blog">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meine Bücher</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meine Musik</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meine Coding Projekte</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <router-outlet></router-outlet>
-<div #jellyfish class="jellyfish" (mouseover)="fortunecookie()" (click)="swim()">
-    <div class="tentacle"></div>
-    <div class="speech-bubble"> {{ cookie }}</div>
+<div
+  #jellyfish
+  class="jellyfish"
+  (mouseover)="fortunecookie()"
+  (click)="swim()"
+>
+  <div class="tentacle"></div>
+  <div class="speech-bubble">{{ cookie }}</div>
 </div>
 <div class="contact-donate">
-    <div class="contact">
-        <p>Kontakt
-        <p>
-            <a href="https://www.instagram.com/stonedmonkmusic/">
-                <i class="bi bi-instagram"></i>
-            </a>
-        <p></p>
-        <a href="https://www.youtube.com/@sleepystonedmonk">
-            <i class="bi bi-youtube"></i>
-        </a>
-        <p></p>
-        <a href="https://github.com/whiskeyZZ">
-            <i class="bi bi-github"></i>
-        </a>
-    </div>
-    <p></p>
-    <div class="contact">
-        <p>Donate</p>
-        <i class="bi bi-cup-hot-fill"></i>
+  <div class="contact">
+    <p>Kontakt</p>
+    <p>
+      <a href="https://www.instagram.com/stonedmonkmusic/">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </p>
 
-    </div>
+    <p></p>
+    <a href="https://www.youtube.com/@sleepystonedmonk">
+      <i class="bi bi-youtube"></i>
+    </a>
+    <p></p>
+    <a href="https://github.com/whiskeyZZ">
+      <i class="bi bi-github"></i>
+    </a>
+  </div>
+  <p></p>
+  <div class="contact">
+    <p>Donate</p>
+    <i class="bi bi-cup-hot-fill"></i>
+  </div>
 </div>

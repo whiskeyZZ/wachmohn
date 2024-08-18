@@ -8,22 +8,20 @@ import { HttpErrorResponse } from '@angular/common/http';
   standalone: true,
   imports: [],
   templateUrl: './blog.component.html',
-  styleUrl: './blog.component.scss'
+  styleUrl: './blog.component.scss',
 })
 export class BlogComponent {
-
   entries: Entry[];
 
   constructor(private service: WachmohnService) {
-    this.entries = []
+    this.entries = [];
   }
 
   public getEntries() {
     this.service.getBlogEntries().subscribe({
-      next: (response: Entry[]) => {this.entries = response}
-    })
+      next: (response: Entry[]) => {
+        this.entries = response;
+      },
+    });
   }
-
-
-
 }
